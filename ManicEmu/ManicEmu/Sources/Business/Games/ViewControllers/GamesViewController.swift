@@ -35,7 +35,7 @@ class GamesViewController: BaseViewController {
             guard let self = self else { return }
             self.showSideMenu(leftSide: false)
         }
-
+        
         return view
     }()
     ///顶部工具条 搜索 选择
@@ -121,11 +121,7 @@ class GamesViewController: BaseViewController {
             if empty {
                 self.gamesToolView.stopSearch()
             }
-            if UIDevice.isPhone && UIDevice.isLandscape {
-                self.gamesToolView.isHidden = true
-            } else {
-                self.gamesToolView.isHidden = empty
-            }
+            self.gamesToolView.isHidden = empty
         }
         return view
     }()
@@ -189,7 +185,7 @@ class GamesViewController: BaseViewController {
     
     private let GameEditToolBarHeightMax = 205.0
     private let GameEditToolBarHeightMin = 116.0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
@@ -239,7 +235,7 @@ class GamesViewController: BaseViewController {
             gamesListView.snp.makeConstraints { make in
                 make.edges.equalToSuperview()
             }
-
+            
             view.addSubview(topBlurView)
             
             view.addSubview(gamesNavigationView)
@@ -279,47 +275,36 @@ class GamesViewController: BaseViewController {
             
             view.addSubview(gamesListView)
             gamesListView.snp.makeConstraints { make in
-                if UIDevice.isLandscape {
-                    //横屏的时候左右都有菜单
-                    make.top.bottom.equalToSuperview()
-                    make.center.equalToSuperview()
-                    make.width.equalTo(Constants.Size.WindowSize.maxDimension - Constants.Size.SideMenuWidth*2)
-                } else {
-                    //竖屏的时候只有右边有菜单
-                    make.edges.equalToSuperview()
-                }
+                make.edges.equalToSuperview()
             }
             
             view.addSubview(topBlurView)
             
             view.addSubview(gamesNavigationView)
+            gamesNavigationView.controllerButton.isHidden = false
+            gamesNavigationView.historyButton.isHidden = false
             
-            if UIDevice.isLandscape {
-                gamesNavigationView.controllerButton.isHidden = true
-                gamesNavigationView.historyButton.isHidden = true
-            }
             gamesNavigationView.snp.makeConstraints { make in
                 make.top.equalToSuperview().offset(Constants.Size.ContentInsetTop)
-                make.leading.trailing.equalTo(gamesListView)
+                make.leading.trailing.equalToSuperview()
                 make.height.equalTo(Constants.Size.ItemHeightMid)
             }
             
             view.addSubview(gamesToolView)
             gamesToolView.snp.makeConstraints { make in
                 make.top.equalTo(gamesNavigationView.snp.bottom)
-                make.leading.trailing.equalTo(gamesListView)
+                make.leading.trailing.equalToSuperview()
                 make.height.equalTo(Constants.Size.ItemHeightHuge)
             }
             
-            
             topBlurView.snp.makeConstraints { make in
-                make.leading.top.trailing.equalTo(gamesListView)
+                make.leading.top.trailing.equalToSuperview()
                 make.bottom.equalTo(gamesNavigationView)
             }
             
             view.addSubview(gamesEditToolBar)
             gamesEditToolBar.snp.makeConstraints { make in
-                make.leading.trailing.equalTo(gamesListView)
+                make.leading.trailing.equalToSuperview()
                 make.height.equalTo(GameEditToolBarHeightMax)
                 make.bottom.equalToSuperview().offset(GameEditToolBarHeightMax)
             }
@@ -328,40 +313,10 @@ class GamesViewController: BaseViewController {
             cornerMaskViewForiPad.snp.makeConstraints { make in
                 make.edges.equalTo(gamesListView)
             }
-            
-            if UIDevice.isLandscape {
-                view.addSubview(controllersSettingView)
-                controllersSettingView.snp.makeConstraints { make in
-                    make.leading.top.bottom.equalToSuperview()
-                    make.trailing.equalTo(gamesListView.snp.leading)
-                }
-                
-                view.addSubview(playHistoryView)
-                playHistoryView.snp.makeConstraints { make in
-                    make.top.trailing.bottom.equalToSuperview()
-                    make.leading.equalTo(gamesListView.snp.trailing)
-                }
-                controllersSettingView.backgroundColor = .black
-                playHistoryView.backgroundColor = .black
-                cornerMaskViewForiPad.isHidden = false
-            } else {
-                view.addSubview(controllersSettingView)
-                controllersSettingView.snp.makeConstraints { make in
-                    make.top.bottom.equalToSuperview()
-                    make.trailing.equalTo(gamesListView.snp.leading)
-                    make.width.equalTo(Constants.Size.SideMenuWidth)
-                }
-                
-                view.addSubview(playHistoryView)
-                playHistoryView.snp.makeConstraints { make in
-                    make.top.bottom.equalToSuperview()
-                    make.leading.equalTo(gamesListView.snp.trailing)
-                    make.width.equalTo(Constants.Size.SideMenuWidth)
-                }
-                cornerMaskViewForiPad.isHidden = true
-            }
+            cornerMaskViewForiPad.isHidden = true
         }
     }
+
     
     private func setEditToolBar(show: Bool, singleSelect: Bool = true) {
         
@@ -420,58 +375,7 @@ class GamesViewController: BaseViewController {
     
     private func updateViews() {
         if UIDevice.isPad {
-            gamesListView.snp.remakeConstraints { make in
-                if UIDevice.isLandscape {
-                    //横屏的时候左右都有菜单
-                    make.top.bottom.equalToSuperview()
-                    make.centerX.equalToSuperview()
-                    make.width.equalTo(Constants.Size.WindowSize.maxDimension - Constants.Size.SideMenuWidth*2)
-                } else {
-                    //竖屏的时候只有右边有菜单
-                    make.edges.equalToSuperview()
-                }
-            }
-            
-            if UIDevice.isLandscape {
-                gamesNavigationView.controllerButton.isHidden = true
-                gamesNavigationView.historyButton.isHidden = true
-                if !view.subviews.contains(where: { $0 == controllersSettingView }) {
-                    view.addSubview(controllersSettingView)
-                    controllersSettingView.snp.makeConstraints { make in
-                        make.leading.top.bottom.equalToSuperview()
-                        make.trailing.equalTo(gamesListView.snp.leading)
-                    }
-                } else {
-                    controllersSettingView.snp.remakeConstraints { make in
-                        make.leading.top.bottom.equalToSuperview()
-                        make.trailing.equalTo(gamesListView.snp.leading)
-                    }
-                }
-                
-                if !view.subviews.contains(where: { $0 == playHistoryView }) {
-                    view.addSubview(playHistoryView)
-                    playHistoryView.snp.makeConstraints { make in
-                        make.trailing.top.bottom.equalToSuperview()
-                        make.leading.equalTo(gamesListView.snp.trailing)
-                    }
-                } else {
-                    playHistoryView.snp.remakeConstraints { make in
-                        make.trailing.top.bottom.equalToSuperview()
-                        make.leading.equalTo(gamesListView.snp.trailing)
-                    }
-                }
-                controllersSettingView.backgroundColor = .black
-                playHistoryView.backgroundColor = .black
-                cornerMaskViewForiPad.isHidden = false
-            } else {
-                gamesNavigationView.controllerButton.isHidden = false
-                gamesNavigationView.historyButton.isHidden = false
-                controllersSettingView.removeFromSuperview()
-                playHistoryView.removeFromSuperview()
-                controllersSettingView.backgroundColor = .clear
-                playHistoryView.backgroundColor = .clear
-                cornerMaskViewForiPad.isHidden = true
-            }
+            // do nothing
             DispatchQueue.main.asyncAfter(delay: 0.35) {
                 self.gamesListView.collectionView.reloadData()
             }

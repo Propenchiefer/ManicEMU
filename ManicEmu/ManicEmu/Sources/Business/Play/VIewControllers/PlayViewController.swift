@@ -2128,7 +2128,7 @@ extension PlayViewController {
             
             //配置System的位置
             if manicGame.gameType == .dc {
-                LibretroCore.sharedInstance().updateLibretroConfig("system_directory", value: Constants.Path.Flycast)
+              //  LibretroCore.sharedInstance().updateLibretroConfig("system_directory", value: Constants.Path.Flycast)
             } else {
                 LibretroCore.sharedInstance().updateLibretroConfig("system_directory", value: Constants.Path.System.libretroPath)
             }

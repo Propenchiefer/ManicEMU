@@ -125,7 +125,7 @@ class BIOSCollectionViewCell: UICollectionViewCell {
             for (index, bios) in biosItems.enumerated() {
                 var biosInLib = Constants.Path.System.appendingPathComponent(bios.fileName)
                 if gameType == .dc {
-                    biosInLib = Constants.Path.Flycast.appendingPathComponent("dc/\(bios.fileName)")
+                   // biosInLib = Constants.Path.Flycast.appendingPathComponent("dc/\(bios.fileName)")
                 }
                 let isBiosExists = fileManager.fileExists(atPath: biosInLib)
                 if isBiosExists {
@@ -206,7 +206,7 @@ class BIOSCollectionViewCell: UICollectionViewCell {
                                         try? FileManager.safeCopyItem(at: match.url, to: URL(fileURLWithPath: Constants.Path.BIOS.appendingPathComponent(match.fileName)), shouldReplace: true)
                                         var matchFilePath = Constants.Path.System.appendingPathComponent(match.fileName)
                                         if gameType == .dc {
-                                            matchFilePath = Constants.Path.Flycast.appendingPathComponent("dc/\(match.fileName)")
+                              //              matchFilePath = Constants.Path.Flycast.appendingPathComponent("dc/\(match.fileName)")
                                         }
                                         try? FileManager.safeCopyItem(at: match.url, to: URL(fileURLWithPath: matchFilePath), shouldReplace: true)
                                     }

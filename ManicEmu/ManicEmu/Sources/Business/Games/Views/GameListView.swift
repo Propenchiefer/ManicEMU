@@ -426,7 +426,7 @@ class GameListView: BaseView {
             } else {
                 var column = Constants.Size.GamesPerRow
                 if UIDevice.isPad {
-                    column = UIDevice.isLandscape ? 3 : (UIDevice.isPadMini ? 4 : 5 )
+                    column = UIDevice.isPadMini ? 7 : 8
                 }
                 let widthDimension: NSCollectionLayoutDimension = .fractionalWidth(1/column)
                 //item布局

@@ -245,7 +245,7 @@ struct Constants {
         static let CLoudflareAPIToken = ""
         static let UnzipKey = "123456"
         static let DeepSeek = ""
-        static let RetroAPI = ""
+        static let RetroAPI = "blahblahblah"
     }
     
     struct Path {
@@ -297,7 +297,6 @@ struct Constants {
         static let BeetleVB = Document.appendingPathComponent(LibretroCore.Cores.BeetleVB.name)
         static let PokeMini = Document.appendingPathComponent(LibretroCore.Cores.PokeMini.name)
         static let BeetlePSXHW = Document.appendingPathComponent(LibretroCore.Cores.BeetlePSXHW.name)
-        static let Flycast = Document.appendingPathComponent(LibretroCore.Cores.Flycast.name)
         static let bsnes = Document.appendingPathComponent(LibretroCore.Cores.bsnes.name)
         static let LibretroSavePath = Document
         static let GamesDB = Resource.appendingPathComponent("Games.db")

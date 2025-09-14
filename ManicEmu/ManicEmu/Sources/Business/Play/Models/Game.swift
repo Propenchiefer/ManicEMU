@@ -262,7 +262,7 @@ class Game: Object, ObjectUpdatable {
         for bios in requireBIOS {
             var biosInLib = Constants.Path.System.appendingPathComponent(bios.fileName)
             if gameType == .dc {
-                biosInLib = Constants.Path.Flycast.appendingPathComponent("dc/\(bios.fileName)")
+          //      biosInLib = Constants.Path.Flycast.appendingPathComponent("dc/\(bios.fileName)")
             }
             let biosInDoc = Constants.Path.BIOS.appendingPathComponent(bios.fileName)
             if fileManager.fileExists(atPath: biosInLib) {
