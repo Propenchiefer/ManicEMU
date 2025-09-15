@@ -1983,8 +1983,10 @@ extension PlayViewController {
         } else if manicGame.gameType == .snes {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.bsnes.name, key: "bsnes_ppu_no_vram_blocking", value: "ON", reload: false)
         } else if manicGame.isPicodriveCore {
+#if SIDE_LOAD
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input1", value: "6 button pad", reload: false)
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input2", value: "6 button pad", reload: false)
+#endif
         } else if manicGame.gameType == .ss {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.Yabause.name, key: "yabause_addon_cartridge", value: "4M_ram", reload: false)
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.BeetleSaturn.name, key: "beetle_saturn_cart", value: "Extended RAM (4MB)", reload: false)

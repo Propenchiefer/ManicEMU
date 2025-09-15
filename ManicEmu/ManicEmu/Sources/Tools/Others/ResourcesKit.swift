@@ -24,6 +24,15 @@ struct ResourcesKit {
                 //需要刷新
                 try? FileManager.safeRemoveItem(at: URL(fileURLWithPath: Constants.Path.Resource))
                 forceRefresh = true
+            } else {
+                //检查一下build version是否更新
+                let systemCoreBuildVersion = UserDefaults.standard.integer(forKey: Constants.DefaultKey.SystemCoreBuildVersion)
+                let appBuildVersion = Int(Constants.Config.AppBuildVersion)!
+                if appBuildVersion > systemCoreBuildVersion {
+                    //build number增加，也需要进行资源刷新
+                    try? FileManager.safeRemoveItem(at: URL(fileURLWithPath: Constants.Path.Resource))
+                    forceRefresh = true
+                }
             }
         } else {
             //内容为空 则强制刷新
@@ -146,6 +155,7 @@ struct ResourcesKit {
                     
                     Log.info("资源解压成功!")
                     UserDefaults.standard.set(Constants.Config.AppVersion, forKey: Constants.DefaultKey.SystemCoreVersion)
+                    UserDefaults.standard.set(Constants.Config.AppBuildVersion, forKey: Constants.DefaultKey.SystemCoreBuildVersion)
                 } else {
                     if let error = error {
                         Log.error("资源解压失败! error:\(error)")

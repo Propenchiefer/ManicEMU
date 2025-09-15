@@ -147,7 +147,15 @@ class Game: Object, ObjectUpdatable {
         } else if gameType == .snes {
             return URL(fileURLWithPath: Constants.Path.bsnes.appendingPathComponent("\(name).srm"))
         } else if isPicodriveCore {
+#if SIDE_LOAD
             return URL(fileURLWithPath: Constants.Path.PicoDrive.appendingPathComponent("\(name).srm"))
+#else
+            if isGearSystemCore {
+                return URL(fileURLWithPath: Constants.Path.Gearsystem.appendingPathComponent("\(name).srm"))
+            } else if isClownMDEmuCore {
+                return URL(fileURLWithPath: Constants.Path.ClownMDEmu.appendingPathComponent("\(name).srm"))
+            }
+#endif
         } else if gameType == .n64 {
             return URL(fileURLWithPath: Constants.Path.Mupen64PlushNext.appendingPathComponent("\(name).srm"))
         } else if gameType == .ss {
@@ -229,7 +237,11 @@ class Game: Object, ObjectUpdatable {
     func isBIOSMissing(required: Bool = true) -> Bool {
         let requireBIOS: [BIOSItem]
         if gameType == .mcd {
+#if SIDE_LOAD
             requireBIOS = Constants.BIOS.MegaCDBios.filter({ required ? $0.required : true })
+#else
+            return false
+#endif
         } else if gameType == .ss {
             if defaultCore == 0 {
                 requireBIOS = Array(Constants.BIOS.SaturnBios[1...2]).filter({ required ? $0.required : true })
@@ -301,7 +313,15 @@ class Game: Object, ObjectUpdatable {
         } else if gameType == .snes {
             return Bundle.main.path(forResource: "bsnes.libretro", ofType: "framework", inDirectory: "Frameworks")
         } else if isPicodriveCore {
+#if SIDE_LOAD
             return Bundle.main.path(forResource: "picodrive.libretro", ofType: "framework", inDirectory: "Frameworks")
+#else
+            if isGearSystemCore {
+                return Bundle.main.path(forResource: "gearsystem.libretro", ofType: "framework", inDirectory: "Frameworks")
+            } else if isClownMDEmuCore {
+                return Bundle.main.path(forResource: "clownmdemu.libretro", ofType: "framework", inDirectory: "Frameworks")
+            }
+#endif
         } else if gameType == .ss {
             if self.fileExtension.lowercased() == "iso" || defaultCore == 1 {
                 return Bundle.main.path(forResource: "yabause.libretro", ofType: "framework", inDirectory: "Frameworks")
@@ -340,6 +360,20 @@ class Game: Object, ObjectUpdatable {
     
     var isPicodriveCore: Bool {
         if gameType == .md || gameType == .mcd || gameType == ._32x || gameType == .sg1000 || gameType == .gg || gameType == .ms {
+            return true
+        }
+        return false
+    }
+    
+    var isGearSystemCore: Bool {
+        if gameType == .sg1000 || gameType == .gg || gameType == .ms {
+            return true
+        }
+        return false
+    }
+    
+    var isClownMDEmuCore: Bool {
+        if gameType == .md || gameType == .mcd {
             return true
         }
         return false

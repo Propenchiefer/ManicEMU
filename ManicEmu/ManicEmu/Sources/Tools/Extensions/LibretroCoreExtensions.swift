@@ -9,7 +9,7 @@
 
 extension LibretroCore {
     enum Cores {
-        case Nestopia, Snes9x, PicoDrive, Yabause, BeetleSaturn, Mupen64PlushNext, BeetleVB, PokeMini, BeetlePSXHW, bsnes, Gambatte, VBAM, mGBA, Flycast
+        case Nestopia, Snes9x, PicoDrive, Yabause, BeetleSaturn, Mupen64PlushNext, BeetleVB, PokeMini, BeetlePSXHW, bsnes, Gambatte, VBAM, mGBA, Flycast, Gearsystem, ClownMDEmu
         
         var name: String {
             switch self {
@@ -41,6 +41,10 @@ extension LibretroCore {
                 "mGBA"
             case .Flycast:
                 "Flycast"
+            case .ClownMDEmu:
+                "ClownMDEmu"
+            case .Gearsystem:
+                "Gearsystem"
             }
         }
     }

@@ -285,6 +285,8 @@ struct Constants {
         static let Nestopia = Document.appendingPathComponent(LibretroCore.Cores.Nestopia.name)
         static let Snes9x = Document.appendingPathComponent(LibretroCore.Cores.Snes9x.name)
         static let PicoDrive = Document.appendingPathComponent(LibretroCore.Cores.PicoDrive.name)
+        static let Gearsystem = Document.appendingPathComponent(LibretroCore.Cores.Gearsystem.name)
+        static let ClownMDEmu = Document.appendingPathComponent(LibretroCore.Cores.ClownMDEmu.name)
         static let Yabause = Document.appendingPathComponent(LibretroCore.Cores.Yabause.name)
         static let BeetleSaturn = Document.appendingPathComponent(LibretroCore.Cores.BeetleSaturn.name)
         static let Mupen64PlushNext = Document.appendingPathComponent(LibretroCore.Cores.Mupen64PlushNext.name)
@@ -311,6 +313,7 @@ struct Constants {
         static let HadSavedSnapshot = "HadSavedSnapshot"
         static let ShowRequestReviewDate = "ShowRequestReviewDate"
         static let SystemCoreVersion = "SystemCoreVersion"
+        static let SystemCoreBuildVersion = "SystemCoreBuildVersion"
         static let HasShow3DSPlayAlert = "HasShow3DSPlayAlert"
         static let HasShow3DSNotSupportAlert = "HasShow3DSNotSupportAlert"
         static let FlexSkinFirstTimeGuide = "FlexSkinFirstTimeGuide"
@@ -395,6 +398,7 @@ struct Constants {
     enum Config {
         static let AppName: String = value(forKey: "CFBundleDisplayName")
         static let AppVersion: String = value(forKey: "CFBundleShortVersionString")
+        static let AppBuildVersion: String = value(forKey: "CFBundleVersion")
         static let AppIdentifier: String = value(forKey: "CFBundleIdentifier")
         static func value<T>(forKey key: String) -> T {
             guard let value = Bundle.main.object(forInfoDictionaryKey: key) as? T else {
