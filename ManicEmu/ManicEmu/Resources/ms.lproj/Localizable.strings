@@ -650,3 +650,6 @@ Tekan butang pengawal...";
 "DCGameNoSupportGameSave" = "Dreamcast tidak menyokong import/eksport simpanan. Gunakan VMU Explorer untuk mengedit fail memori dalam folder Manic EMU-Flycast-dc.";
 
 "Challenge" = "Cabaran";
+"GameTypeLicensingError" = "Maaf! Disebabkan sekatan lesen pada teras %@, platform ini tidak tersedia buat sementara. Anda boleh tunggu kemas kini akan datang atau guna versi sideload.";
+"DCJITLessVer" = "Versi Lalai menawarkan emulasi pantas dan tepat tetapi tidak dapat menjalankan permainan WinCE. Untuk main permainan WinCE, pilih teras WinCE.";
+"TVStandard" = "Jika standard TV permainan tidak sepadan dengan rantau, kelajuan mungkin terjejas. Kawasan PAL termasuk Eropah, Australia dan New Zealand.";

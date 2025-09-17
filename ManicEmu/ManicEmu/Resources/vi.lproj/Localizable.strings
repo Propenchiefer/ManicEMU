@@ -670,3 +670,6 @@ Nhấn nút điều khiển...";
 "DCGameNoSupportGameSave" = "Dreamcast không hỗ trợ nhập/xuất tập tin lưu. Sử dụng VMU Explorer để chỉnh sửa tập tin bộ nhớ trong thư mục Manic EMU-Flycast-dc.";
 
 "Challenge" = "Thử Thách";
+"GameTypeLicensingError" = "Xin lỗi! Do hạn chế bản quyền với lõi %@, nền tảng này tạm thời không khả dụng. Bạn có thể đợi bản cập nhật sau hoặc dùng phiên bản sideload.";
+"DCJITLessVer" = "Phiên bản Mặc định cung cấp mô phỏng nhanh và chính xác nhưng không chạy được game WinCE. Để chơi game WinCE, vui lòng chọn lõi WinCE.";
+"TVStandard" = "Nếu tiêu chuẩn TV của trò chơi không khớp với khu vực, tốc độ có thể bị ảnh hưởng. Khu vực PAL bao gồm châu Âu, Úc và New Zealand.";

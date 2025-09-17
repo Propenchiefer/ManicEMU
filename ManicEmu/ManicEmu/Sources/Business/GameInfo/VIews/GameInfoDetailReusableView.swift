@@ -780,7 +780,7 @@ class GameInfoDetailReusableView: UICollectionReusableView {
                 }
             }
         }))
-        let view = ContextMenuButton(image: nil, menu: UIMenu(children: actions))
+        let view = ContextMenuButton(image: nil, menu: UIMenu(title: R.string.localizable.dcjitLessVer(), children: actions))
         return view
     }()
     
@@ -791,6 +791,37 @@ class GameInfoDetailReusableView: UICollectionReusableView {
         view.addTapGesture { [weak self] gesture in
             guard let self = self else { return }
             self.dcCoreContextMenuButton.triggerTapGesture()
+        }
+        return view
+    }()
+    
+    private lazy var tvStandardMenuButton: ContextMenuButton = {
+        var actions: [UIMenuElement] = []
+        actions.append((UIAction(title: "NTSC (59.94HZ)") { [weak self] _ in
+            guard let self = self else { return }
+            self.tVStandardButton.titleLabel.text = "NTSC (59.94HZ)"
+            if let game {
+                game.updateExtra(key: ExtraKey.tvStandard.rawValue, value: 0)
+            }
+        }))
+        actions.append((UIAction(title: "PAL (50HZ)") { [weak self] _ in
+            guard let self = self else { return }
+            self.tVStandardButton.titleLabel.text = "PAL (50HZ)"
+            if let game {
+                game.updateExtra(key: ExtraKey.tvStandard.rawValue, value: 1)
+            }
+        }))
+        let view = ContextMenuButton(image: nil, menu: UIMenu(title: R.string.localizable.tvStandard(), children: actions))
+        return view
+    }()
+    
+    private lazy var tVStandardButton: SymbolButton = {
+        let standard = (game?.getExtraInt(key: ExtraKey.tvStandard.rawValue) ?? 0) == 0 ? "NTSC (59.94HZ)" : "PAL (50HZ)"
+        let view = SymbolButton(symbol: .tv, title: standard, horizontalContian: true)
+        view.titleLabel.numberOfLines = 0
+        view.addTapGesture { [weak self] gesture in
+            guard let self = self else { return }
+            self.tvStandardMenuButton.triggerTapGesture()
         }
         return view
     }()
@@ -860,6 +891,8 @@ class GameInfoDetailReusableView: UICollectionReusableView {
                     updatePS1FunctionButton()
                 } else if game.gameType == .dc {
                     updateDCFunctionButton()
+                } else if game.gameType == .md {
+                    updateMDFunctionButton()
                 }
             }
         }
@@ -1291,6 +1324,25 @@ class GameInfoDetailReusableView: UICollectionReusableView {
             }
             languageContextMenuButton.snp.makeConstraints { make in
                 make.edges.equalTo(languageButton)
+            }
+        }
+    }
+    
+    private func updateMDFunctionButton() {
+        if let game, game.defaultCore == 0 {
+            cheatCodeButton.removeFromSuperview()
+            if let lastView = functionButtonContainerView.subviews.last {
+                //TV Standard
+                functionButtonContainerView.addSubview(tvStandardMenuButton)
+                functionButtonContainerView.addSubview(tVStandardButton)
+                tVStandardButton.snp.makeConstraints { make in
+                    make.leading.equalTo(lastView.snp.trailing).offset(Constants.Size.ContentSpaceMin)
+                    make.centerY.equalToSuperview()
+                    make.size.equalTo(Constants.Size.IconSizeHuge)
+                }
+                tvStandardMenuButton.snp.makeConstraints { make in
+                    make.edges.equalTo(tVStandardButton)
+                }
             }
         }
     }

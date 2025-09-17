@@ -680,3 +680,6 @@
 "DCGameNoSupportGameSave" = "드림캐스트는 저장파일 가져오기/내보내기를 지원하지 않습니다. VMU Explorer를 사용하여 Manic EMU-Flycast-dc 폴더에 있는 메모리 파일을 편집하세요.";
 
 "Challenge" = "도전";
+"GameTypeLicensingError" = "죄송합니다! %@ 코어의 라이선스 제한으로 인해 이 플랫폼은 현재 사용할 수 없습니다. 업데이트를 기다리거나 사이드로드 버전을 이용해 주세요.";
+"DCJITLessVer" = "기본 버전은 빠르고 정확한 에뮬레이션을 제공하지만 WinCE 게임은 실행할 수 없습니다. WinCE 게임을 실행하려면 WinCE 버전을 선택하세요.";
+"TVStandard" = "게임의 TV 규격이 지역과 맞지 않으면 속도에 영향을 줄 수 있습니다. PAL 지역은 유럽, 호주, 뉴질랜드 등을 포함합니다.";

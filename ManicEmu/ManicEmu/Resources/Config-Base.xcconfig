@@ -11,5 +11,5 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 APP_BUNDLE_IDENTIFIER = com.aoshuang.manicemu
-APP_BUILD_VERSION = 1
+APP_BUILD_VERSION = 5
 APP_VERSION = 1.7.0

@@ -672,3 +672,6 @@ Stiskněte tlačítko ovladače...";
 "DCGameNoSupportGameSave" = "Dreamcast nepodporuje import/export uložených her. K úpravě paměťových souborů ve složce Manic EMU-Flycast-dc použijte VMU Explorer.";
 
 "Challenge" = "Výzva";
+"GameTypeLicensingError" = "Omlouváme se! Kvůli licenčním omezením jádra %@ není tato platforma dočasně dostupná. Můžete počkat na budoucí aktualizaci nebo použít sideload verzi.";
+"DCJITLessVer" = "Výchozí verze nabízí rychlou a přesnou emulaci, ale nemůže spouštět hry WinCE. Chcete-li hrát hry WinCE, vyberte jádro WinCE.";
+"TVStandard" = "Pokud se televizní standard hry neshoduje s regionem, může to ovlivnit rychlost. PAL oblasti zahrnují hlavně Evropu, Austrálii a Nový Zéland.";

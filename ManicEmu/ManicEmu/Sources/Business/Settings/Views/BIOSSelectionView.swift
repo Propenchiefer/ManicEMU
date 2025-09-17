@@ -92,6 +92,7 @@ class BIOSSelectionView: BaseView {
 #if SIDE_LOAD
             self.datas = [.desc, .dc, .ps1, .mcd, .ss, .ds]
 #else
+            //AppStore版本禁用MCD
             self.datas = [.desc, .dc, .ps1, .ss, .ds]
 #endif
         }

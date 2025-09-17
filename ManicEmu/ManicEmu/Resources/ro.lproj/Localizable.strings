@@ -676,3 +676,6 @@ Apasă butonul controlerului...";
 "DCGameNoSupportGameSave" = "Dreamcast nu suportă importul/exportul salvărilor. Utilizați VMU Explorer pentru a edita fișierele de memorie din folderul Manic EMU-Flycast-dc.";
 
 "Challenge" = "Provocare";
+"GameTypeLicensingError" = "Ne pare rău! Din cauza restricțiilor de licență cu nucleul %@, această platformă nu este disponibilă temporar. Puteți aștepta o actualizare viitoare sau să folosiți versiunea sideload.";
+"DCJITLessVer" = "Versiunea Implicită oferă emulare rapidă și precisă, dar nu poate rula jocuri WinCE. Pentru a juca titluri WinCE, selectați nucleul WinCE.";
+"TVStandard" = "Dacă standardul TV al jocului nu corespunde regiunii, viteza poate fi afectată. Regiunile PAL includ în principal Europa, Australia și Noua Zeelandă.";

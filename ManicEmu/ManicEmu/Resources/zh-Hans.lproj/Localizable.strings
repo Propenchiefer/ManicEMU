@@ -683,3 +683,7 @@
 "DCGameNoSupportGameSave" = "Dreamcast不支持游戏存档的导入导出功能，需要你使用VMU Explorer工具自行编辑存档记忆体，这些记忆体文件存在于Manic EMU-Flycast-dc目录中";
 
 "Challenge" = "挑战";
+
+"GameTypeLicensingError" = "抱歉！由于%@核心存在授权限制，该平台暂时不可用。您可以等待后续更新，或者在此期间尝试使用我们的侧载版本。";
+"DCJITLessVer" = "Default版本提供快速和精准的游戏模拟，但是无法运行WinCE游戏，运行WinCE游戏请选择WinCE版本核心";
+"TVStandard" = "游戏与对应地区的电视制式标准不一致可能会影响游戏速度。PAL区域(主要欧洲、澳大利亚、新西兰等地区)";

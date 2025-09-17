@@ -678,3 +678,6 @@ Appuyez sur le bouton du contrôleur...";
 "DCGameNoSupportGameSave" = "Dreamcast ne supporte pas l'importation/exportation de sauvegardes. Utilisez VMU Explorer pour modifier les fichiers mémoire dans le dossier Manic EMU-Flycast-dc.";
 
 "Challenge" = "Défi";
+"GameTypeLicensingError" = "Désolé ! À cause de restrictions de licence avec le noyau %@, cette plateforme est temporairement indisponible. Vous pouvez attendre une mise à jour future ou utiliser la version en sideload.";
+"DCJITLessVer" = "La version Par Défaut offre une émulation rapide et précise, mais ne peut pas exécuter les jeux WinCE. Pour jouer à des jeux WinCE, choisissez le noyau WinCE.";
+"TVStandard" = "Si la norme télé du jeu ne correspond pas à la région, la vitesse peut être affectée. Les régions PAL comprennent l’Europe, l’Australie et la Nouvelle-Zélande.";

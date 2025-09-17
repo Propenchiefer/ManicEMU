@@ -96,7 +96,7 @@ class CheevosPopupAchievementCell: UICollectionViewCell {
         style.alignment = .left
         titleLabel.attributedText = matt.applying(attributes: [.paragraphStyle: style])
         
-        if let measuredProgress = achievement.measuredProgress {
+        if let measuredProgress = achievement.measuredProgress, !measuredProgress.isEmpty {
             progressView.progress = achievement.measuredPercent
             progressLabel.text = measuredProgress
             progressView.isHidden = false

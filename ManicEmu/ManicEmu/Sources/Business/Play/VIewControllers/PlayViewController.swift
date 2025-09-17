@@ -191,6 +191,14 @@ class PlayViewController: GameViewController {
     private var isFirstTimeSetGBPalette = true;
     
     static func startGame(game: Game, saveState: GameSaveState? = nil) {
+#if !SIDE_LOAD
+        //AppStore版本禁用MCD和32X
+        if game.gameType == .mcd || game.gameType == ._32x {
+            UIView.makeAlert(detail: R.string.localizable.gameTypeLicensingError(game.gameType.localizedShortName), cancelTitle: R.string.localizable.confirmTitle())
+            return
+        }
+#endif
+        
         if game.isRomExtsts || game.isNDSHomeMenuGame {
             UIView.hideLoadingToast(forceHide: true)
             func showPlayView() {
@@ -1240,7 +1248,7 @@ extension PlayViewController {
             return false
         }
         
-        guard item.enable(for: manicGame.gameType) else {
+        guard item.enable(for: manicGame.gameType, defaultCore: manicGame.defaultCore) else {
             UIView.makeToast(message: R.string.localizable.notSupportGameSetting(manicGame.gameType.localizedShortName))
             return false
         }
@@ -1983,10 +1991,11 @@ extension PlayViewController {
         } else if manicGame.gameType == .snes {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.bsnes.name, key: "bsnes_ppu_no_vram_blocking", value: "ON", reload: false)
         } else if manicGame.isPicodriveCore {
-#if SIDE_LOAD
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input1", value: "6 button pad", reload: false)
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input2", value: "6 button pad", reload: false)
-#endif
+        } else if manicGame.isClownMDEmuCore {
+            let tvStandard = (manicGame.getExtraInt(key: ExtraKey.tvStandard.rawValue) ?? 0) == 0 ? "ntsc" : "pal"
+            LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.ClownMDEmu.name, key: "clownmdemu_tv_standard", value: tvStandard, reload: false)
         } else if manicGame.gameType == .ss {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.Yabause.name, key: "yabause_addon_cartridge", value: "4M_ram", reload: false)
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.BeetleSaturn.name, key: "beetle_saturn_cart", value: "Extended RAM (4MB)", reload: false)

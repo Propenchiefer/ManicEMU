@@ -687,3 +687,9 @@ Press the controller button to complete mapping...";
 "DCGameNoSupportGameSave" = "Dreamcast doesn’t support save import/export. Use VMU Explorer to edit memory files located in the Manic EMU-Flycast-dc folder.";
 
 "Challenge" = "Challenge";
+
+"GameTypeLicensingError" = "Sorry! Due to licensing restrictions with the %@ core, this platform is temporarily unavailable. You can either wait for a future update to bring it back, or in the meantime try our sideload version.";
+"DCJITLessVer" = "The Default version offers fast and accurate emulation but cannot run WinCE games. To play WinCE games, please select the WinCE core.";
+"TVStandard" = "If the game’s TV standard does not match the region, it may affect game speed. PAL regions include most of Europe, Australia, and New Zealand.";
+
+

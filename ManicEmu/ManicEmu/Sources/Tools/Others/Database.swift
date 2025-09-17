@@ -263,6 +263,41 @@ struct Database {
                             }
                         }
                     }
+#if SIDE_LOAD
+                    //Sideload版本默认使用Picodrive
+                    let picodriveGames = realm.objects(Game.self).where({ $0.gameType == .md || $0.gameType == .ms || $0.gameType == .gg || $0.gameType == .sg1000 })
+                    if picodriveGames.count > 0 {
+                        try? realm.write({
+                            for g in picodriveGames {
+                                g.defaultCore = 1
+                            }
+                        })
+                        for g in picodriveGames {
+                            if g.gameSaveStates.count > 0 {
+                                for s in g.gameSaveStates {
+                                    s.updateExtra(key: ExtraKey.saveStateCore.rawValue, value: 1)
+                                }
+                            }
+                        }
+                    }
+#else
+                    let picodriveGames = realm.objects(Game.self).where({ $0.gameType == .md || $0.gameType == .ms || $0.gameType == .gg || $0.gameType == .sg1000 })
+                    if picodriveGames.count > 0 {
+                        for g in picodriveGames {
+                            //将picodrive的存档转移到Gearsystem或ClownMDEmu的目录
+                            let oldSaveUrl = URL(fileURLWithPath: Constants.Path.PicoDrive.appendingPathComponent("\(g.name).srm"))
+                            if FileManager.default.fileExists(atPath: oldSaveUrl.path) {
+                                try? FileManager.safeMoveItem(at: oldSaveUrl, to: g.gameSaveUrl, shouldReplace: true)
+                            }
+                            //将旧的即时存档全部编辑Picodrive生成
+                            if g.gameSaveStates.count > 0 {
+                                for s in g.gameSaveStates {
+                                    s.updateExtra(key: ExtraKey.saveStateCore.rawValue, value: 1)
+                                }
+                            }
+                        }
+                    }
+#endif
                 }
             }
         } catch {
