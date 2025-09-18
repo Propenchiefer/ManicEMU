@@ -324,7 +324,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Device:
-    :commit: 7ff1e9987d8348f59cdf756ef515ca5a1ce13f91
+    :commit: acbc1606d8fa7daa843dd65a60d8b1ae57b3536a
     :git: https://github.com/LeeAoshuang/Device.git
   Fireworks:
     :commit: c54a983649510ddaf1ff315000626eb43486410b

@@ -680,3 +680,4 @@ Paina ohjaimen nappia...";
 "GameTypeLicensingError" = "Pahoittelut! %@-ytimen lisenssirajoitusten vuoksi tämä alusta ei ole tällä hetkellä käytettävissä. Voit odottaa tulevaa päivitystä tai käyttää sideload-versiota.";
 "DCJITLessVer" = "Oletusversio tarjoaa nopean ja tarkan emuloinnin, mutta ei voi ajaa WinCE-pelejä. Pelaa WinCE-pelejä valitsemalla WinCE-ydin.";
 "TVStandard" = "Jos pelin TV-standardi ei vastaa aluetta, se voi vaikuttaa nopeuteen. PAL-alueisiin kuuluvat pääasiassa Eurooppa, Australia ja Uusi-Seelanti.";
+"SNESVRAMEnable" = "Jotkut hakatut ROMit vaativat tätä vaihtoehtoa grafiikan oikeanlaatuiseen renderöintiin, mutta käyttöönotto poistaa RetroAchievements-tuen.";

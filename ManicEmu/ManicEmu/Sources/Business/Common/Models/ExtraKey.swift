@@ -24,4 +24,5 @@ enum ExtraKey: String {
     case achievementsProgress
     case alwaysShowProgress
     case tvStandard
+    case snesVRAM
 }

@@ -683,3 +683,4 @@ Premi il pulsante del controller...";
 "GameTypeLicensingError" = "Spiacenti! A causa di restrizioni di licenza con il core %@, questa piattaforma non è temporaneamente disponibile. Puoi aspettare un futuro aggiornamento o usare la versione sideload.";
 "DCJITLessVer" = "La versione Predefinita offre emulazione rapida e accurata ma non supporta i giochi WinCE. Per giocare ai titoli WinCE, seleziona il core WinCE.";
 "TVStandard" = "Se lo standard TV del gioco non corrisponde alla regione, la velocità potrebbe essere influenzata. Le regioni PAL includono principalmente Europa, Australia e Nuova Zelanda.";
+"SNESVRAMEnable" = "Alcune ROM modificate richiedono questa opzione per il corretto rendering grafico, ma l'attivazione disabiliterà il supporto RetroAchievements.";

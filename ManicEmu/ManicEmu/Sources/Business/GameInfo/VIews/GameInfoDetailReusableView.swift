@@ -826,6 +826,37 @@ class GameInfoDetailReusableView: UICollectionReusableView {
         return view
     }()
     
+    private lazy var snesVRAMMenuButton: ContextMenuButton = {
+        var actions: [UIMenuElement] = []
+        actions.append((UIAction(title: R.string.localizable.enableTitle()) { [weak self] _ in
+            guard let self = self else { return }
+            self.snesVRAMButton.titleLabel.text = "VRAM: " + R.string.localizable.enableTitle()
+            if let game {
+                game.updateExtra(key: ExtraKey.snesVRAM.rawValue, value: true)
+            }
+        }))
+        actions.append((UIAction(title: R.string.localizable.disableTitle()) { [weak self] _ in
+            guard let self = self else { return }
+            self.snesVRAMButton.titleLabel.text = "VRAM: " + R.string.localizable.disableTitle()
+            if let game {
+                game.updateExtra(key: ExtraKey.snesVRAM.rawValue, value: false)
+            }
+        }))
+        let view = ContextMenuButton(image: nil, menu: UIMenu(title: R.string.localizable.snesvramEnable(), children: actions))
+        return view
+    }()
+    
+    private lazy var snesVRAMButton: SymbolButton = {
+        let title = "VRAM: " + ((game?.getExtraBool(key: ExtraKey.snesVRAM.rawValue) ?? false) ? R.string.localizable.enableTitle() : R.string.localizable.disableTitle())
+        let view = SymbolButton(symbol: .memorychip, title: title, horizontalContian: true)
+        view.titleLabel.numberOfLines = 0
+        view.addTapGesture { [weak self] gesture in
+            guard let self = self else { return }
+            self.snesVRAMMenuButton.triggerTapGesture()
+        }
+        return view
+    }()
+    
     var didSegmentChange: ((_ index: Int)->Void)?
     lazy var segmentView: BetterSegmentedControl = {
         let titles = [R.string.localizable.readySegmentManualSave(), R.string.localizable.readySegmentAutoSave()]
@@ -893,6 +924,8 @@ class GameInfoDetailReusableView: UICollectionReusableView {
                     updateDCFunctionButton()
                 } else if game.gameType == .md {
                     updateMDFunctionButton()
+                } else if game.gameType == .snes {
+                    updateSNESFunctionButton()
                 }
             }
         }
@@ -1344,6 +1377,24 @@ class GameInfoDetailReusableView: UICollectionReusableView {
                     make.edges.equalTo(tVStandardButton)
                 }
             }
+        }
+    }
+    
+    private func updateSNESFunctionButton() {
+        if let lastView = functionButtonContainerView.subviews.last {
+            //VRAM
+            functionButtonContainerView.addSubview(snesVRAMMenuButton)
+            functionButtonContainerView.addSubview(snesVRAMButton)
+            snesVRAMButton.snp.makeConstraints { make in
+                make.leading.equalTo(lastView.snp.trailing).offset(Constants.Size.ContentSpaceMin)
+                make.centerY.equalToSuperview()
+                make.size.equalTo(Constants.Size.IconSizeHuge)
+                make.trailing.equalToSuperview()
+            }
+            snesVRAMMenuButton.snp.makeConstraints { make in
+                make.edges.equalTo(snesVRAMButton)
+            }
+            
         }
     }
     

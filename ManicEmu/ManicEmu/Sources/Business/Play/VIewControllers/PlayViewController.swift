@@ -1989,7 +1989,9 @@ extension PlayViewController {
         } else if manicGame.gameType == .nes {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.Nestopia.name, key: "nestopia_aspect", value: "uncorrected", reload: false)
         } else if manicGame.gameType == .snes {
-            LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.bsnes.name, key: "bsnes_ppu_no_vram_blocking", value: "ON", reload: false)
+            if manicGame.getExtraBool(key: ExtraKey.snesVRAM.rawValue) ?? false {
+                LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.bsnes.name, key: "bsnes_ppu_no_vram_blocking", value: "ON", reload: false)
+            }
         } else if manicGame.isPicodriveCore {
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input1", value: "6 button pad", reload: false)
             LibretroCore.sharedInstance().updateConfig(LibretroCore.Cores.PicoDrive.name, key: "picodrive_input2", value: "6 button pad", reload: false)
@@ -2130,6 +2132,8 @@ extension PlayViewController {
                 LibretroCore.sharedInstance().updateLibretroConfig("savefile_directory", value: Constants.Path.GBCSavePath.libretroPath)
             } else if manicGame.gameType == .gba {
                 LibretroCore.sharedInstance().updateLibretroConfig("savefile_directory", value: Constants.Path.GBASavePath.libretroPath)
+            } else if manicGame.gameType == .snes {
+                LibretroCore.sharedInstance().updateLibretroConfig("savefile_directory", value: Constants.Path.bsnes.libretroPath)
             } else {
                 LibretroCore.sharedInstance().updateLibretroConfig("savefile_directory", value: Constants.Path.LibretroSavePath.libretroPath)
             }
@@ -2568,6 +2572,8 @@ extension PlayViewController {
                 } else if manicGame.gameType == .gba {
                     customSaveDir = Constants.Path.GBASavePath
                     customSaveExtension = ".sav"
+                } else if manicGame.gameType == .snes {
+                    customSaveDir = Constants.Path.bsnes
                 }
                 
                 let vc = LibretroCore.sharedInstance().start(withCustomSaveDir: customSaveDir)

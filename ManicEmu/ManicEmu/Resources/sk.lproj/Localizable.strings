@@ -679,3 +679,4 @@ Ak sa vyskytne nestabilita v 3DS, pozrite si «Časté otázky» alebo sa pripoj
 "GameTypeLicensingError" = "Ospravedlňujeme sa! Kvôli licenčným obmedzeniam jadra %@ nie je táto platforma dočasne dostupná. Môžete počkať na budúcu aktualizáciu alebo použiť sideload verziu.";
 "DCJITLessVer" = "Predvolená verzia ponúka rýchlu a presnú emuláciu, ale nedokáže spúšťať hry WinCE. Ak chcete hrať WinCE hry, vyberte jadro WinCE.";
 "TVStandard" = "Ak TV štandard hry nezodpovedá regiónu, môže to ovplyvniť rýchlosť. PAL regióny zahŕňajú hlavne Európu, Austráliu a Nový Zéland.";
+"SNESVRAMEnable" = "Niektoré upravené ROM vyžadujú túto možnosť pre správne vykresľovanie grafiky, ale jej povolenie deaktivuje podporu RetroAchievements.";

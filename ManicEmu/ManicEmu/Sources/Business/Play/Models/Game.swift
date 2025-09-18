@@ -308,7 +308,11 @@ class Game: Object, ObjectUpdatable {
         } else if gameType == .nes {
             return Bundle.main.path(forResource: "nestopia.libretro", ofType: "framework", inDirectory: "Frameworks")
         } else if gameType == .snes {
-            return Bundle.main.path(forResource: "bsnes.libretro", ofType: "framework", inDirectory: "Frameworks")
+            if getExtraBool(key: ExtraKey.snesVRAM.rawValue) ?? false {
+                return Bundle.main.path(forResource: "bsnes.libretro", ofType: "framework", inDirectory: "Frameworks")
+            } else {
+                return Bundle.main.path(forResource: "bsnes-jg.libretro", ofType: "framework", inDirectory: "Frameworks")
+            }
         } else if isPicodriveCore {
             return Bundle.main.path(forResource: "picodrive.libretro", ofType: "framework", inDirectory: "Frameworks")
         } else if isClownMDEmuCore {

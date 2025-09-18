@@ -671,3 +671,4 @@ Trykk på kontrollerknappen...";
 "GameTypeLicensingError" = "Beklager! På grunn av lisensbegrensninger med %@-kjernen er denne plattformen midlertidig utilgjengelig. Du kan vente på en fremtidig oppdatering eller bruke sideload-versjonen.";
 "DCJITLessVer" = "Standardversjonen gir rask og presis emulering, men kan ikke kjøre WinCE-spill. For å spille WinCE-spill, velg WinCE-kjernen.";
 "TVStandard" = "Hvis spillets TV-standard ikke samsvarer med regionen, kan hastigheten bli påvirket. PAL-regioner inkluderer hovedsakelig Europa, Australia og New Zealand.";
+"SNESVRAMEnable" = "Noen hackede ROM krever dette alternativet for korrekt grafikkgjengivelse, men aktivering vil deaktivere RetroAchievements-støtte.";

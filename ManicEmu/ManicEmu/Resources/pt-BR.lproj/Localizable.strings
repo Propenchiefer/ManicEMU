@@ -680,3 +680,4 @@ Pressione o botão do controle...";
 "GameTypeLicensingError" = "Desculpe! Devido a restrições de licença do núcleo %@, esta plataforma está temporariamente indisponível. Você pode aguardar uma atualização futura ou usar a versão sideload.";
 "DCJITLessVer" = "A versão Padrão oferece emulação rápida e precisa, mas não executa jogos WinCE. Para jogar títulos WinCE, selecione o núcleo WinCE.";
 "TVStandard" = "Se o padrão de TV do jogo não corresponder à região, a velocidade pode ser afetada. Regiões PAL incluem principalmente Europa, Austrália e Nova Zelândia.";
+"SNESVRAMEnable" = "Algumas ROMs modificadas exigem esta opção para renderizar gráficos corretamente, mas ativá-la desabilitará o suporte a RetroAchievements.";

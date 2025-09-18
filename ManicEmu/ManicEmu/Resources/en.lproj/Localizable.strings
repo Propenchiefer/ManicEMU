@@ -692,4 +692,4 @@ Press the controller button to complete mapping...";
 "DCJITLessVer" = "The Default version offers fast and accurate emulation but cannot run WinCE games. To play WinCE games, please select the WinCE core.";
 "TVStandard" = "If the game’s TV standard does not match the region, it may affect game speed. PAL regions include most of Europe, Australia, and New Zealand.";
 
-
+"SNESVRAMEnable" = "Some hacked ROMs require this option to render graphics correctly, but enabling it will disable RetroAchievements support.";

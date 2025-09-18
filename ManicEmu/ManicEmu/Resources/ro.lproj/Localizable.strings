@@ -679,3 +679,4 @@ Apasă butonul controlerului...";
 "GameTypeLicensingError" = "Ne pare rău! Din cauza restricțiilor de licență cu nucleul %@, această platformă nu este disponibilă temporar. Puteți aștepta o actualizare viitoare sau să folosiți versiunea sideload.";
 "DCJITLessVer" = "Versiunea Implicită oferă emulare rapidă și precisă, dar nu poate rula jocuri WinCE. Pentru a juca titluri WinCE, selectați nucleul WinCE.";
 "TVStandard" = "Dacă standardul TV al jocului nu corespunde regiunii, viteza poate fi afectată. Regiunile PAL includ în principal Europa, Australia și Noua Zeelandă.";
+"SNESVRAMEnable" = "Unele ROM-uri modificate necesită această opțiune pentru a afișa corect grafica, dar activarea va dezactiva suportul pentru RetroAchievements.";

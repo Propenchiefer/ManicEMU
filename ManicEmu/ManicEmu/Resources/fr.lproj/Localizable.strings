@@ -681,3 +681,4 @@ Appuyez sur le bouton du contrôleur...";
 "GameTypeLicensingError" = "Désolé ! En raison de restrictions de licence avec le cœur %@, cette plateforme est temporairement indisponible. Vous pouvez attendre une future mise à jour ou utiliser la version sideload.";
 "DCJITLessVer" = "La version Par Défaut offre une émulation rapide et précise mais ne peut pas exécuter les jeux WinCE. Pour jouer à des titres WinCE, sélectionnez le cœur WinCE.";
 "TVStandard" = "Si la norme TV du jeu ne correspond pas à la région, la vitesse peut être affectée. Les régions PAL incluent principalement l’Europe, l’Australie et la Nouvelle-Zélande.";
+"SNESVRAMEnable" = "Certaines ROM modifiées nécessitent cette option pour un rendu graphique correct, mais son activation désactivera le support des RetroAchievements.";

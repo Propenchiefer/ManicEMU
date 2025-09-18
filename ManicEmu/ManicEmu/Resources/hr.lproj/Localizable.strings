@@ -677,3 +677,4 @@ Ako naiđete na nestabilnost u 3DS-u, pogledajte «Često Postavljana Pitanja» 
 "GameTypeLicensingError" = "Žao nam je! Zbog ograničenja licence s jezgrom %@, ova platforma trenutačno nije dostupna. Možete pričekati buduće ažuriranje ili koristiti sideload verziju.";
 "DCJITLessVer" = "Zadana verzija nudi brzo i precizno emuliranje, ali ne može pokretati WinCE igre. Za igranje WinCE igara odaberite WinCE jezgru.";
 "TVStandard" = "Ako TV standard igre ne odgovara regiji, brzina može biti pogođena. PAL regije uključuju uglavnom Europu, Australiju i Novi Zeland.";
+"SNESVRAMEnable" = "Neki hakovani ROM-ovi zahtijevaju ovu opciju za ispravan prikaz grafike, ali aktiviranje će onemogućiti podršku za RetroAchievements.";

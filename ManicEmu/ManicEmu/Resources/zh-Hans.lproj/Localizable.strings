@@ -687,3 +687,5 @@
 "GameTypeLicensingError" = "抱歉！由于%@核心存在授权限制，该平台暂时不可用。您可以等待后续更新，或者在此期间尝试使用我们的侧载版本。";
 "DCJITLessVer" = "Default版本提供快速和精准的游戏模拟，但是无法运行WinCE游戏，运行WinCE游戏请选择WinCE版本核心";
 "TVStandard" = "游戏与对应地区的电视制式标准不一致可能会影响游戏速度。PAL区域(主要欧洲、澳大利亚、新西兰等地区)";
+
+"SNESVRAMEnable" = "部分修改版ROM需开启此选项才能正确渲染图形，但启用后将无法支持RetroAchievements成就系统。";
