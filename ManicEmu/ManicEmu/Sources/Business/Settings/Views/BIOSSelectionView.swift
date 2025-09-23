@@ -88,8 +88,13 @@ class BIOSSelectionView: BaseView {
             self.datas = [.desc, .ps1]
         } else if let gameType, gameType == .dc {
             self.datas = [.desc, .dc]
-        }  else {
+        } else {
+#if SIDE_LOAD
             self.datas = [.desc, .dc, .ps1, .mcd, .ss, .ds]
+#else
+            //AppStore版本禁用MCD
+            self.datas = [.desc, .dc, .ps1, .ss, .ds]
+#endif
         }
         super.init(frame: .zero)
         Log.debug("\(String(describing: Self.self)) init")

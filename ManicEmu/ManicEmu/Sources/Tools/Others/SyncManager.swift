@@ -164,10 +164,6 @@ class SyncManager: NSObject {
                     }
                 }
             }
-            
-            if let cloudDrive = SyncManager.shared.cloudDrive {
-                
-            }
         }
     }
     

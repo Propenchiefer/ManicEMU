@@ -677,3 +677,7 @@ Druk op de controllerknop...";
 "DCGameNoSupportGameSave" = "Dreamcast ondersteunt geen importeren/exporteren van saves. Gebruik VMU Explorer om geheugenbestanden in de map Manic EMU-Flycast-dc te bewerken.";
 
 "Challenge" = "Uitdaging";
+"GameTypeLicensingError" = "Sorry! Vanwege licentiebeperkingen met de %@-core is dit platform tijdelijk niet beschikbaar. U kunt wachten op een toekomstige update of de sideload-versie proberen.";
+"DCJITLessVer" = "De Standaardversie biedt snelle en nauwkeurige emulatie, maar ondersteunt geen WinCE-games. Kies de WinCE-core om WinCE-games te spelen.";
+"TVStandard" = "Als de tv-standaard van de game niet overeenkomt met de regio, kan dit de snelheid beïnvloeden. PAL-regio’s omvatten voornamelijk Europa, Australië en Nieuw-Zeeland.";
+"SNESVRAMEnable" = "Sommige gehackte ROMs vereisen deze optie voor correcte grafische weergave, maar inschakelen ervan zal RetroAchievements-ondersteuning uitschakelen.";

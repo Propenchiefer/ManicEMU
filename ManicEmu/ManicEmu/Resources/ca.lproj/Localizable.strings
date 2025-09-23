@@ -676,3 +676,7 @@ Prem el botó del control...";
 "DCGameNoSupportGameSave" = "Dreamcast no admet importar/exportar partides. Utilitza VMU Explorer per editar fitxers de memòria a la carpeta Manic EMU-Flycast-dc.";
 
 "Challenge" = "Repte";
+"GameTypeLicensingError" = "Ho sentim! A causa de restriccions de llicència amb el nucli %@, aquesta plataforma no està disponible temporalment. Pots esperar una futura actualització o fer servir la versió sideload.";
+"DCJITLessVer" = "La versió Per Defecte ofereix una emulació ràpida i precisa però no pot executar jocs WinCE. Per jugar a títols WinCE, selecciona el nucli WinCE.";
+"TVStandard" = "Si l’estàndard de TV del joc no coincideix amb la regió, la velocitat pot veure’s afectada. Les regions PAL inclouen principalment Europa, Austràlia i Nova Zelanda.";
+"SNESVRAMEnable" = "Alguns ROM modificats requereixen aquesta opció per renderitzar gràfics correctament, però l'activació deshabilitarà el suport de RetroAchievements.";

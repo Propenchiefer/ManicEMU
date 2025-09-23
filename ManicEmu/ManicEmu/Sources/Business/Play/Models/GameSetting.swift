@@ -424,7 +424,7 @@ struct GameSetting: SettingCellItem {
         }
     }
     
-    func enable(for gameType: GameType) -> Bool {
+    func enable(for gameType: GameType, defaultCore: Int) -> Bool {
         switch gameType {
         case ._3ds:
             if type == .fastForward || type == .filter || type == .palette || type == .swapDisk || type == .retro {
@@ -446,6 +446,10 @@ struct GameSetting: SettingCellItem {
             }
             
             if (gameType == .vb || gameType == .pm) && type == .cheatCode {
+                return false
+            }
+            
+            if gameType == .md , type == .cheatCode, defaultCore == 0 {
                 return false
             }
             

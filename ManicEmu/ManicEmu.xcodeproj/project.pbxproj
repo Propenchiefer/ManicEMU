@@ -602,6 +602,9 @@
 		57A480CC2E733B83001D4598 /* flycast-jitless.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57A480CD2E733B83001D4598 /* flycast-jitless-wince.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A480C42E733236001D4598 /* flycast-jitless-wince.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57A480E72E74030E001D4598 /* CheevosChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A480E62E740301001D4598 /* CheevosChallengeView.swift */; };
+		57A4812D2E77F98D001D4598 /* gearsystem.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481292E77F482001D4598 /* gearsystem.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57A4812E2E77F993001D4598 /* clownmdemu.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481282E77F482001D4598 /* clownmdemu.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57A481542E7A8B84001D4598 /* bsnes-jg.libretro.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57AD35EA2D7DEB9D0092FD03 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD35E92D7DEB900092FD03 /* WebViewController.swift */; };
 		57AD35EC2D7DEF360092FD03 /* SheerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD35EB2D7DEF2E0092FD03 /* SheerExtensions.swift */; };
 		57B6EBDB2D758819002E619C /* GameSaveMatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B6EBDA2D7587FE002E619C /* GameSaveMatchGameView.swift */; };
@@ -810,6 +813,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				57A481542E7A8B84001D4598 /* bsnes-jg.libretro.framework in Embed Frameworks */,
+				57A4812E2E77F993001D4598 /* clownmdemu.libretro.framework in Embed Frameworks */,
+				57A4812D2E77F98D001D4598 /* gearsystem.libretro.framework in Embed Frameworks */,
 				57A480CC2E733B83001D4598 /* flycast-jitless.libretro.framework in Embed Frameworks */,
 				57A480CD2E733B83001D4598 /* flycast-jitless-wince.libretro.framework in Embed Frameworks */,
 				5771C2922E699C930062EDE0 /* flycast.libretro.framework in Embed Frameworks */,
@@ -1619,6 +1625,9 @@
 		57A480C42E733236001D4598 /* flycast-jitless-wince.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "flycast-jitless-wince.libretro.framework"; path = "../Cores/flycast-jitless-wince.libretro.framework"; sourceTree = SOURCE_ROOT; };
 		57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "flycast-jitless.libretro.framework"; path = "../Cores/flycast-jitless.libretro.framework"; sourceTree = SOURCE_ROOT; };
 		57A480E62E740301001D4598 /* CheevosChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheevosChallengeView.swift; sourceTree = "<group>"; };
+		57A481282E77F482001D4598 /* clownmdemu.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = clownmdemu.libretro.framework; path = ../Cores/clownmdemu.libretro.framework; sourceTree = SOURCE_ROOT; };
+		57A481292E77F482001D4598 /* gearsystem.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gearsystem.libretro.framework; path = ../Cores/gearsystem.libretro.framework; sourceTree = SOURCE_ROOT; };
+		57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "bsnes-jg.libretro.framework"; path = "../Cores/bsnes-jg.libretro.framework"; sourceTree = SOURCE_ROOT; };
 		57AD35E92D7DEB900092FD03 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		57AD35EB2D7DEF2E0092FD03 /* SheerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheerExtensions.swift; sourceTree = "<group>"; };
 		57ADFED92D94F52500502E5C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -3768,6 +3777,9 @@
 		57BFBE702DD335FD00AABF98 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				57A481532E7A8B76001D4598 /* bsnes-jg.libretro.framework */,
+				57A481282E77F482001D4598 /* clownmdemu.libretro.framework */,
+				57A481292E77F482001D4598 /* gearsystem.libretro.framework */,
 				5771C2902E699C880062EDE0 /* flycast.libretro.framework */,
 				57A480CB2E733B77001D4598 /* flycast-jitless.libretro.framework */,
 				57A480C42E733236001D4598 /* flycast-jitless-wince.libretro.framework */,
@@ -4458,7 +4470,7 @@
 			);
 			mainGroup = A5A001E624555A5F006E0F0E;
 			packageReferences = (
-				576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R" */,
+				576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R.swift" */,
 				57DF84BD2D637A1A00AA0AAB /* XCRemoteSwiftPackageReference "DominantColors" */,
 				57F632CC2D7050B9007270E8 /* XCRemoteSwiftPackageReference "SMBClient" */,
 				57F632E12D714E46007270E8 /* XCRemoteSwiftPackageReference "WebDAVKitSwift" */,
@@ -4469,12 +4481,12 @@
 				5717445C2DA264FF007CCE25 /* XCRemoteSwiftPackageReference "zstd" */,
 				5717445F2DA2652F007CCE25 /* XCRemoteSwiftPackageReference "OpenSSL" */,
 				571BB9382DA44D6B00830134 /* XCRemoteSwiftPackageReference "SwiftSDL2" */,
-				570F59BA2DC91FC8007BFD92 /* XCLocalSwiftPackageReference "../ChromaColorPicker" */,
+				570F59BA2DC91FC8007BFD92 /* XCLocalSwiftPackageReference "ChromaColorPicker" */,
 				575A39CA2DCCFA6B00B28FC2 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				570A27FE2DCF03CF001249C6 /* XCRemoteSwiftPackageReference "PLzmaSDK" */,
 				57F0D8492DE2E7A600760F57 /* XCRemoteSwiftPackageReference "SwiftCloudDrive" */,
 				5706B0BC2DFDE4570066122E /* XCRemoteSwiftPackageReference "BlurUIKit" */,
-				5744C6602E34D6E10088081A /* XCLocalSwiftPackageReference "../KeyboardKit" */,
+				5744C6602E34D6E10088081A /* XCLocalSwiftPackageReference "KeyboardKit" */,
 			);
 			productRefGroup = A5A001F024555A5F006E0F0E /* Products */;
 			projectDirPath = "";
@@ -4540,13 +4552,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ManicEmu/Pods-ManicEmu-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ManicEmu/Pods-ManicEmu-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -5259,7 +5267,7 @@
 /* Begin PBXTargetDependency section */
 		576DD4482E0FFAC900644424 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = 576DD4472E0FFAC900644424 /* RswiftGenerateInternalResources */;
+			productRef = 576DD4472E0FFAC900644424 /* plugin:RswiftGenerateInternalResources */;
 		};
 		57BFBEB12DD489C700AABF98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -7840,11 +7848,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		570F59BA2DC91FC8007BFD92 /* XCLocalSwiftPackageReference "../ChromaColorPicker" */ = {
+		570F59BA2DC91FC8007BFD92 /* XCLocalSwiftPackageReference "ChromaColorPicker" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../ChromaColorPicker;
 		};
-		5744C6602E34D6E10088081A /* XCLocalSwiftPackageReference "../KeyboardKit" */ = {
+		5744C6602E34D6E10088081A /* XCLocalSwiftPackageReference "KeyboardKit" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../KeyboardKit;
 		};
@@ -7915,7 +7923,7 @@
 				minimumVersion = 2.8.7;
 			};
 		};
-		576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R" */ = {
+		576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
 			requirement = {
@@ -8041,12 +8049,12 @@
 		};
 		576060282D24E8BD00A98B0C /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R" */;
+			package = 576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = RswiftLibrary;
 		};
-		576DD4472E0FFAC900644424 /* RswiftGenerateInternalResources */ = {
+		576DD4472E0FFAC900644424 /* plugin:RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R" */;
+			package = 576060272D24E8BD00A98B0C /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
 		};
 		57DA89122D82B0C20074052A /* SmartCodable */ = {

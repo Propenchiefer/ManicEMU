@@ -276,6 +276,10 @@ extension GameType {
             return [LibretroCore.Cores.BeetleSaturn.name, LibretroCore.Cores.Yabause.name]
         } else if self == .gba {
             return [LibretroCore.Cores.mGBA.name, LibretroCore.Cores.VBAM.name]
+        } else if self == .md {
+            return [LibretroCore.Cores.ClownMDEmu.name, LibretroCore.Cores.PicoDrive.name]
+        } else if self == .ms || self == .gg || self == .sg1000 {
+            return [LibretroCore.Cores.Gearsystem.name, LibretroCore.Cores.PicoDrive.name]
         }
         return []
     }

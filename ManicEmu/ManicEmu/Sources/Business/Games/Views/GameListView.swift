@@ -1074,15 +1074,25 @@ extension GameListView: UICollectionViewDelegate {
                 }
                 
                 if game.gameType.supportCores.count > 0 {
-                    //添加切换核心的操作
-                    let action = UIAction(title: R.string.localizable.switchEmulationCore(), image: .symbolImage(.memorychip)) { _ in
-                        if game.gameType == .ss, game.fileExtension.lowercased() == "iso" {
-                            UIView.makeToast(message: R.string.localizable.saturnISONoSwitchCore())
-                        } else {
-                            CoreSelectionView.show(game: game)
-                        }
+                    var supportSwitchCore = true
+                    #if !SIDE_LOAD
+                    if game.isClownMDEmuCore || game.isGearSystemCore {
+                        //AppStore版本的md、ms、gg、sg-1000不支持核心切换
+                        supportSwitchCore = false
                     }
-                    firstGroup.append(action)
+                    #endif
+                    
+                    if supportSwitchCore {
+                        //添加切换核心的操作
+                        let action = UIAction(title: R.string.localizable.switchEmulationCore(), image: .symbolImage(.memorychip)) { _ in
+                            if game.gameType == .ss, game.fileExtension.lowercased() == "iso" {
+                                UIView.makeToast(message: R.string.localizable.saturnISONoSwitchCore())
+                            } else {
+                                CoreSelectionView.show(game: game)
+                            }
+                        }
+                        firstGroup.append(action)
+                    }
                 }
             }
             

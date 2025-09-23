@@ -670,3 +670,7 @@ Tryck på kontrollknappen...";
 "DCGameNoSupportGameSave" = "Dreamcast stöder inte import/export av sparfil. Använd VMU Explorer för att redigera minnesfiler i mappen Manic EMU-Flycast-dc.";
 
 "Challenge" = "Utmaning";
+"GameTypeLicensingError" = "Tyvärr! På grund av licensbegränsningar med %@-kärnan är denna plattform tillfälligt otillgänglig. Du kan vänta på en framtida uppdatering eller använda sideload-versionen.";
+"DCJITLessVer" = "Standardversionen erbjuder snabb och exakt emulering men kan inte köra WinCE-spel. För att spela WinCE-spel, välj WinCE-kärnan.";
+"TVStandard" = "Om spelets TV-standard inte matchar regionen kan hastigheten påverkas. PAL-regioner inkluderar främst Europa, Australien och Nya Zeeland.";
+"SNESVRAMEnable" = "Vissa hackade ROM kräver detta alternativ för korrekt grafikrendering, men aktivering inaktiverar RetroAchievements-stöd.";

@@ -69,6 +69,12 @@ More platforms coming soon!
 - Custom Shortcuts: Redefine your controls
 
 
+### [RetroAchievements Integration • Challenge Yourself]
+- Hardcore Mode Verified by RetroAchievements
+- Track and Share your Achievments with ease
+- RetroAchievments Account required
+
+
 ### [iCloud Sync • Your Gaming Universe]
 - Cross-device sync for games, saves, and settings
 - Encrypted storage • Cloud backups • No progress loss

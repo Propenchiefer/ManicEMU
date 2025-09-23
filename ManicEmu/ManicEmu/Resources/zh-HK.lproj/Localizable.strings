@@ -682,3 +682,7 @@
 "DCGameNoSupportGameSave" = "Dreamcast 不支援存檔導入/導出。請使用 VMU Explorer 編輯 Manic EMU-Flycast-dc 文件夾中的記憶卡檔案。";
 
 "Challenge" = "挑戰";
+"GameTypeLicensingError" = "抱歉！由於%@核心存在授權限制，此平台暫時不可用。你可以等待日後更新，或使用側載版本。";
+"DCJITLessVer" = "Default版本提供快速及準確的模擬，但無法運行WinCE遊戲。如要運行WinCE遊戲，請選擇WinCE版本核心。";
+"TVStandard" = "如果遊戲與地區的電視制式不符，可能會影響速度。PAL地區包括歐洲、澳洲及紐西蘭等。";
+"SNESVRAMEnable" = "部分修改版ROM需要開啟此選項才能正確顯示圖形，但啟用後將無法支援RetroAchievements成就系統。";

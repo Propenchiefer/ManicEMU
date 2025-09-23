@@ -341,7 +341,7 @@ extension GameSettingView: UICollectionViewDataSource {
             }
         }
         
-        cell.setData(item: item, editable: isEditingMode, isPlus: indexPath.section != 0, enable: item.enable(for: game.gameType), mappingMode: isMappingMode, specialTitle: specialTitle)
+        cell.setData(item: item, editable: isEditingMode, isPlus: indexPath.section != 0, enable: item.enable(for: game.gameType, defaultCore: game.defaultCore), mappingMode: isMappingMode, specialTitle: specialTitle)
         if isEditingMode {
             cell.editButton.addTapGesture { [weak self] gesture in
                 guard let self = self else { return }
@@ -437,7 +437,7 @@ extension GameSettingView: UICollectionViewDelegate {
             return
         }
         var item = gameSettings[indexPath.row]
-        guard item.enable(for: game.gameType) else {
+        guard item.enable(for: game.gameType, defaultCore: game.defaultCore) else {
             UIView.makeToast(message: R.string.localizable.notSupportGameSetting(game.gameType.localizedShortName))
             return
         }
@@ -507,7 +507,7 @@ extension GameSettingView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
         guard let indexPath = indexPaths.first, !isEditingMode, !isMappingMode else { return nil }
         var item = gameSettings[indexPath.row]
-        guard item.enable(for: game.gameType) else { return nil }
+        guard item.enable(for: game.gameType, defaultCore: game.defaultCore) else { return nil }
         if item.type == .quickLoadState {
             //设置快速读档
             let actions = self.game.gameSaveStates.filter({ $0.type == .manualSaveState }).suffix(5).map { state in

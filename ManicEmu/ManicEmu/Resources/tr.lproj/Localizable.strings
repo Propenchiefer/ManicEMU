@@ -676,3 +676,7 @@ Kontrolcü düğmesine basın...";
 "DCGameNoSupportGameSave" = "Dreamcast kayıt içe/dışa aktarmayı desteklemez. Manic EMU-Flycast-dc klasöründeki bellek dosyalarını düzenlemek için VMU Explorer'ı kullanın.";
 
 "Challenge" = "Meydan Okuma";
+"GameTypeLicensingError" = "Üzgünüz! %@ çekirdeği için lisans kısıtlamaları nedeniyle bu platform şu anda kullanılamıyor. Bir sonraki güncellemeyi bekleyebilir veya yan yükleme sürümünü deneyebilirsiniz.";
+"DCJITLessVer" = "Varsayılan sürüm hızlı ve doğru emülasyon sunar ancak WinCE oyunlarını çalıştıramaz. WinCE oyunları için lütfen WinCE çekirdeğini seçin.";
+"TVStandard" = "Oyunun TV standardı bölgenizle uyuşmazsa hız etkilenebilir. PAL bölgeleri çoğunlukla Avrupa, Avustralya ve Yeni Zelanda’yı kapsar.";
+"SNESVRAMEnable" = "Bazı hacklenmiş ROM'lar grafiklerin doğru işlenmesi için bu seçeneği gerektirir, ancak etkinleştirmek RetroAchievements desteğini devre dışı bırakır.";
